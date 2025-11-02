@@ -33,21 +33,31 @@
 }
 
 /* Иконки справа */
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* Ссылки на иконки */
+.icons a {
+  color: white;           /* оставляем иконку белой */
+  text-decoration: none;  /* убираем подчеркивание */
+  display: flex;          /* чтобы hover применялся корректно */
+  font-size: 25px;        /* увеличиваем размер иконок */
+  transition: transform 0.2s; /* плавный эффект при наведении */
 }
-
-.icon {
-  font-size: 28px;
+/* Иконка профиля*/
+.icon-profile {
+  font-size: 25px;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
-.icon:hover {
-  transform: scale(1.15);
+.icon-profile:hover {
+  transform: scale(1.15); /* эффект при наведении */
 }
+
+
+/* Эффект при наведении на ссылку */
+.icons a:hover {
+  transform: scale(1.15); /* как у .icon:hover */
+}
+
 
 /* Центральные кнопки */
 .main {
