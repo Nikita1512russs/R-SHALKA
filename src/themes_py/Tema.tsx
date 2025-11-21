@@ -18,8 +18,8 @@ const Tema: React.FC = () => {
       navigate("/lists");
       break;;
       case "Циклы":
-        alert("Тема «Циклы» пока в разработке");
-        break;
+      navigate("/loops");
+      break;
       default:
         alert("Эта тема ещё не реализована");
     }
