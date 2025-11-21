@@ -1,45 +1,59 @@
+// App.tsx
 import React from "react";
 import "./App.css";
-import { FaVk, FaTelegramPlane, FaUserCircle } from "react-icons/fa";
+import { FaVk, FaTelegramPlane, FaUserCircle, FaUser } from "react-icons/fa";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Profile from "./Profile";
 import Tema from "./themes_py/Tema";
 import ArrayPage from "./themes_py/Array";
 import ListsPage from "./themes_py/Lists";
 import LoopsPage from "./themes_py/Loops";
+import Login from "./Register/Login";
+import Register from "./Register/Register";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+  
+  // Проверяем, авторизован ли пользователь
+  const user = JSON.parse(localStorage.getItem("user") || "null");
 
-return (
-  <div className="container">
-    {/* Верхняя панель */}
-    <header className="header">
-      <h1 className="logo">Решалка</h1>
-      <div className="icons" style={{ display: "flex", gap: "20px" }}>
-        {/* Ссылки на соцсети */}
-        <a
-          href="https://vk.ru/tyagunov.nikita"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaVk className="icon" />
-        </a>
+  return (
+    <div className="container">
+      {/* Верхняя панель */}
+      <header className="header">
+        <h1 className="logo">Решалка</h1>
+        <div className="icons" style={{ display: "flex", gap: "20px" }}>
+          {/* Ссылки на соцсети */}
+          <a
+            href="https://vk.ru/tyagunov.nikita"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaVk className="icon" />
+          </a>
 
-        <a
-          href="https://t.me/nikitaRUSS1512"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTelegramPlane className="icon" />
-        </a>
+          <a
+            href="https://t.me/nikitaRUSS1512"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTelegramPlane className="icon" />
+          </a>
 
-          {/* При нажатии — переход в личный кабинет */}
-          <FaUserCircle
-            className="icon-profile"
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/profile")}
-          />
+          {/* Условное отображение: иконка профиля или иконка входа */}
+          {user ? (
+            <FaUserCircle
+              className="icon-profile"
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate("/profile")}
+            />
+          ) : (
+            <FaUser
+              className="icon-login"
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate("/login")}
+            />
+          )}
         </div>
       </header>
 
@@ -62,6 +76,8 @@ const App: React.FC = () => {
         <Route path="/array" element={<ArrayPage />} />
         <Route path="/lists" element={<ListsPage />} />
         <Route path="/loops" element={<LoopsPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

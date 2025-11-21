@@ -10,16 +10,50 @@
   position: relative;
 }
 
+/* Кнопка "Назад" */
 .back-button {
   position: absolute;
   top: 20px;
   left: 20px;
   background: none;
   border: none;
+  font-size: 16px;
+  color: #1f2937;
   cursor: pointer;
-  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
 .back-button:hover {
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+  .back-button {
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+  }
+}
+
+.logout-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
 }
