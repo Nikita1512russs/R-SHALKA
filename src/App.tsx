@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import Profile from "./Profile";
 import Tema from "./themes_py/Tema";
 import ArrayPage from "./themes_py/Array";
+import ListsPage from "./themes_py/Lists";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ const App: React.FC = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/tema" element={<Tema />} /> 
         <Route path="/array" element={<ArrayPage />} />
+        <Route path="/lists" element={<ListsPage />} />
       </Routes>
     </Router>
   );

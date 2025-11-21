@@ -15,8 +15,8 @@ const Tema: React.FC = () => {
         navigate("/array");
         break;
       case "Списки":
-        alert("Тема «Списки» пока в разработке");
-        break;
+      navigate("/lists");
+      break;;
       case "Циклы":
         alert("Тема «Циклы» пока в разработке");
         break;
