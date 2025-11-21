@@ -3,15 +3,27 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Tema.css";
 
+
 const Tema: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleTopicClick = (topic: string) => {
-    console.log("Выбрана тема:", topic);
-    alert(`Вы выбрали тему: ${topic}. Скоро будет генерация задачи!`);
-  };
-
   const topics = ["Массивы", "Списки", "Циклы"];
+
+  const handleTopicClick = (topic: string) => {
+    switch (topic) {
+      case "Массивы":
+        navigate("/array");
+        break;
+      case "Списки":
+        alert("Тема «Списки» пока в разработке");
+        break;
+      case "Циклы":
+        alert("Тема «Циклы» пока в разработке");
+        break;
+      default:
+        alert("Эта тема ещё не реализована");
+    }
+  };
 
   return (
     <div className="tema-container">
@@ -32,7 +44,7 @@ const Tema: React.FC = () => {
         </ul>
       </div>
 
-      {/* Логотип Python (как на главной) */}
+      {/* Логотип Python */}
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
         alt="Python"

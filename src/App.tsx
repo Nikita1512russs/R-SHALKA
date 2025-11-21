@@ -4,6 +4,7 @@ import { FaVk, FaTelegramPlane, FaUserCircle } from "react-icons/fa";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Profile from "./Profile";
 import Tema from "./themes_py/Tema";
+import ArrayPage from "./themes_py/Array";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -56,6 +57,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/tema" element={<Tema />} /> 
+        <Route path="/array" element={<ArrayPage />} />
       </Routes>
     </Router>
   );
