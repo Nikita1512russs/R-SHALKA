@@ -3,6 +3,7 @@ import "./App.css";
 import { FaVk, FaTelegramPlane, FaUserCircle } from "react-icons/fa";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Profile from "./Profile";
+import Tema from "./themes_py/Tema";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ return (
 
       {/* Центральное меню */}
       <main className="main" style={{ display: "flex", gap: "30px", padding: "50px" }}>
-        <button className="circle py" title="Python"></button>
+        <button className="circle py" title="Python" onClick={() => navigate("/tema")}></button>
         <button className="circle hz" title="ХЗ"></button>
       </main>
     </div>
@@ -54,6 +55,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/tema" element={<Tema />} /> 
       </Routes>
     </Router>
   );

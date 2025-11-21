@@ -1,0 +1,114 @@
+
+
+.tema-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #24be24, #ffffff);
+  padding: 50px 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tema-content {
+  max-width: 400px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-item {
+  font-size: 1.5rem;
+  color: #1f2937;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.topic-item:hover {
+  background-color: #e0f7fa;
+  transform: translateX(5px);
+}
+
+
+.python-logo {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-right: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Плавный переход */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .tema-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .tema-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .py-logo {
+    font-size: 5rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .topic-item {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+}
