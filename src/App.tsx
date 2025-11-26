@@ -11,6 +11,7 @@ import LoopsPage from "./themes_py/Loops";
 import Login from "./Register/Login";
 import Register from "./Register/Register";
 import TemaJs from "./theme_js/Tema_js";
+import ArrayJsPage from "./theme_js/Array_js";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -80,6 +81,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/js/tema" element={<TemaJs />} />
+        <Route path="/js/array" element={<ArrayJsPage />} />
       </Routes>
     </Router>
   );
