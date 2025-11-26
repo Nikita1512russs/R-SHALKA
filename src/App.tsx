@@ -10,6 +10,7 @@ import ListsPage from "./themes_py/Lists";
 import LoopsPage from "./themes_py/Loops";
 import Login from "./Register/Login";
 import Register from "./Register/Register";
+import TemaJs from "./theme_js/Tema_js";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
       {/* Центральное меню */}
       <main className="main" style={{ display: "flex", gap: "30px", padding: "50px" }}>
         <button className="circle py" title="Python" onClick={() => navigate("/tema")}></button>
-        <button className="circle js" title="JavaScript" onClick={() => navigate("")}></button>
+        <button className="circle js" title="JavaScript" onClick={() => navigate("/js/tema")}></button>
       </main>
     </div>
   );
@@ -78,6 +79,7 @@ const App: React.FC = () => {
         <Route path="/loops" element={<LoopsPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/js/tema" element={<TemaJs />} />
       </Routes>
     </Router>
   );
