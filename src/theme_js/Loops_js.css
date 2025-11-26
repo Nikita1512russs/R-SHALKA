@@ -1,5 +1,6 @@
+/* src/theme_js/Loops_js.css */
 
-.objects-js-container {
+.loops-js-container {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -171,7 +172,7 @@
 }
 
 @media (max-width: 768px) {
-  .objects-js-container {
+  .loops-js-container {
     flex-direction: column;
     padding: 10px;
   }

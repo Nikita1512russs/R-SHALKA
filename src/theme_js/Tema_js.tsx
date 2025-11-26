@@ -7,11 +7,15 @@ const TemaJs: React.FC = () => {
 
   const topics = ["Массивы", "Объекты", "Циклы"];
 
-  const handleTopicClick = (topic: string) => {
+const handleTopicClick = (topic: string) => {
   if (topic === "Массивы") {
     navigate("/js/array");
   } else if (topic === "Объекты") {
     navigate("/js/objects");
+  } else if (topic === "Циклы") {
+    navigate("/js/loops");
+  } else {
+    alert(`Тема "${topic}" для JavaScript пока в разработке`);
   }
 };
 
