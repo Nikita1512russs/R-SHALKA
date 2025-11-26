@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       {/* Центральное меню */}
       <main className="main" style={{ display: "flex", gap: "30px", padding: "50px" }}>
         <button className="circle py" title="Python" onClick={() => navigate("/tema")}></button>
-        <button className="circle hz" title="ХЗ"></button>
+        <button className="circle js" title="JavaScript" onClick={() => navigate("")}></button>
       </main>
     </div>
   );
