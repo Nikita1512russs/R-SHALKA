@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+passlib[argon2]  # Для хеширования паролей
+python-jose[cryptography]  # Для работы с JWT
+sqlalchemy
+pydantic-settings
